@@ -42,3 +42,4 @@ msbuild.log
 msbuild.err
 
 Report.Website/logs/
+/AzureAuth/appsettings.local.json
