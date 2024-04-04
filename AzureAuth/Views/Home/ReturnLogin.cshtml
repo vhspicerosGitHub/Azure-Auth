@@ -1,0 +1,28 @@
+﻿@using AzureAuth.Controllers
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<hr />
+@if (User.Identity.IsAuthenticated)
+{
+    var getUser = @HomeController.GetUserOnAzureAd(User);
+
+    <h4> Azure AD User name: @getUser.user_name </h4>
+    <h4> Azure AD Email: @getUser.user_email </h4>
+    <h4> Azure AD User domain: @getUser.user_domain</h4>
+
+    <a class="nav-link" asp-area="MicrosoftIdentity" asp-controller="Account" asp-action="SignOut">
+        Sign Out (X)
+    </a>
+}
+
+@if (ViewData.ContainsKey("email") && !string.IsNullOrWhiteSpace(ViewData["email"].ToString()))
+{
+    <h4> Azure AD Email: @ViewData["email"].ToString() </h4>
+}
