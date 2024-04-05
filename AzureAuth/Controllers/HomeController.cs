@@ -5,59 +5,48 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Runtime.CompilerServices;
 using System.Security.Claims;
 
-namespace AzureAuth.Controllers
-{
-    public class HomeController : Controller
-    {
+namespace AzureAuth.Controllers {
+    public class HomeController : Controller {
         private readonly ILogger<HomeController> _logger;
         protected readonly IConfiguration _config;
         private readonly string client_id;
         private readonly string tenant_id;
         private readonly string redirect_url;
 
-        public HomeController(ILogger<HomeController> logger, IConfiguration configuration)
-        {
+        public HomeController(ILogger<HomeController> logger, IConfiguration configuration) {
             _logger = logger;
             _config = configuration;
-            tenant_id = _config.GetValue<string>("azure_auth:client_id");
-            client_id = _config.GetValue<string>("azure_auth:tenant_id");
+            tenant_id = _config.GetValue<string>("azure_auth:tenant_id");
+            client_id = _config.GetValue<string>("azure_auth:client_id");
             redirect_url = _config.GetValue<string>("azure_auth:redirect_url");
-
         }
 
-
-        private string AutorizeUrl
-        {
-            get
-            {
+        private string AutorizeUrl {
+            get {
                 return $"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/authorize?client_id={client_id}&response_type=id_token&redirect_uri={redirect_url}&response_mode=form_post&scope=openid%20offline_access%20user.read%20mail.read&state=12345&nonce=678910";
             }
         }
 
-        private void AddViewData()
-        {
+        private void AddViewData() {
             ViewData["autorize_url"] = AutorizeUrl;
 
         }
 
 
 
-        public IActionResult Index()
-        {
+        public IActionResult Index() {
             AddViewData();
             return View();
         }
 
-        public IActionResult Privacy()
-        {
+        public IActionResult Privacy() {
             AddViewData();
             return View();
 
         }
 
         [HttpPost]
-        public async Task<IActionResult> ReturnLogin()
-        {
+        public async Task<IActionResult> ReturnLogin() {
             AddViewData();
 
             var idToken = Request.Form["id_token"];
@@ -70,25 +59,21 @@ namespace AzureAuth.Controllers
             var email = token.Claims.FirstOrDefault(c => c.Type == "email")?.Value;
 
             ViewData["email"] = email;
-            var a = await GetUserInfo(idToken);
+            //var a = await GetUserInfo(idToken);
             return View();
 
         }
 
-        public async Task<string> GetUserInfo(string accessToken)
-        {
+        public async Task<string> GetUserInfo(string accessToken) {
             var client = new HttpClient();
             client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
 
-            try
-            {
+            try {
                 var url = $"https://login.microsoftonline.com/{tenant_id}/oauth2/v2.0/token";
                 HttpResponseMessage response = await client.GetAsync(url);
                 response.EnsureSuccessStatusCode();
                 return await response.Content.ReadAsStringAsync();
-            }
-            catch (HttpRequestException ex)
-            {
+            } catch (HttpRequestException ex) {
                 Console.WriteLine($"Error al obtener la información del usuario: {ex.Message}");
                 return null;
             }
@@ -96,8 +81,7 @@ namespace AzureAuth.Controllers
 
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
+        public IActionResult Error() {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
 
@@ -106,13 +90,10 @@ namespace AzureAuth.Controllers
         /// </summary>
         /// <param name="user">Auth Claims</param>
         /// <returns>Azure AD</returns>
-        public static UserAzureAD GetUserOnAzureAd(ClaimsPrincipal user)
-        {
+        public static UserAzureAD GetUserOnAzureAd(ClaimsPrincipal user) {
             var preferredUsernameClaim = user.Claims.FirstOrDefault(c => c.Type.Equals("preferred_username"));
-            if (preferredUsernameClaim != null)
-            {
-                return new UserAzureAD
-                {
+            if (preferredUsernameClaim != null) {
+                return new UserAzureAD {
                     user_name = user.Claims.FirstOrDefault(p => p.Type.Equals("name")).Value,
                     user_email = preferredUsernameClaim.Value,
                     user_domain = string.Format(@"cpiccr\{0}", preferredUsernameClaim.Value.Split('@')[0])
