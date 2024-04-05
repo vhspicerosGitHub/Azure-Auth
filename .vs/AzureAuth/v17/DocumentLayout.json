@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\vhspiceros\\github\\Azure-Auth\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{FDDF7006-4289-4580-8C44-63A1DE7D5794}|AzureAuth\\AzureAuth.csproj|c:\\vhspiceros\\github\\azure-auth\\azureauth\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FDDF7006-4289-4580-8C44-63A1DE7D5794}|AzureAuth\\AzureAuth.csproj|solutionrelative:azureauth\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDDF7006-4289-4580-8C44-63A1DE7D5794}|AzureAuth\\AzureAuth.csproj|c:\\vhspiceros\\github\\azure-auth\\azureauth\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FDDF7006-4289-4580-8C44-63A1DE7D5794}|AzureAuth\\AzureAuth.csproj|solutionrelative:azureauth\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDDF7006-4289-4580-8C44-63A1DE7D5794}|AzureAuth\\AzureAuth.csproj|c:\\vhspiceros\\github\\azure-auth\\azureauth\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDDF7006-4289-4580-8C44-63A1DE7D5794}|AzureAuth\\AzureAuth.csproj|solutionrelative:azureauth\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDDF7006-4289-4580-8C44-63A1DE7D5794}|AzureAuth\\AzureAuth.csproj|c:\\vhspiceros\\github\\azure-auth\\azureauth\\appsettings.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{FDDF7006-4289-4580-8C44-63A1DE7D5794}|AzureAuth\\AzureAuth.csproj|solutionrelative:azureauth\\appsettings.local.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\vhspiceros\\github\\Azure-Auth\\AzureAuth\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "AzureAuth\\appsettings.Development.json",
+              "ToolTip": "C:\\vhspiceros\\github\\Azure-Auth\\AzureAuth\\appsettings.Development.json",
+              "RelativeToolTip": "AzureAuth\\appsettings.Development.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-05T14:39:19.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\vhspiceros\\github\\Azure-Auth\\AzureAuth\\appsettings.json",
+              "RelativeDocumentMoniker": "AzureAuth\\appsettings.json",
+              "ToolTip": "C:\\vhspiceros\\github\\Azure-Auth\\AzureAuth\\appsettings.json",
+              "RelativeToolTip": "AzureAuth\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-05T14:39:09.307Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\vhspiceros\\github\\Azure-Auth\\AzureAuth\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "AzureAuth\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\vhspiceros\\github\\Azure-Auth\\AzureAuth\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "AzureAuth\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAkwDYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T14:38:56.086Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.local.json",
+              "DocumentMoniker": "C:\\vhspiceros\\github\\Azure-Auth\\AzureAuth\\appsettings.local.json",
+              "RelativeDocumentMoniker": "AzureAuth\\appsettings.local.json",
+              "ToolTip": "C:\\vhspiceros\\github\\Azure-Auth\\AzureAuth\\appsettings.local.json",
+              "RelativeToolTip": "AzureAuth\\appsettings.local.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-04-04T19:27:54.908Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
