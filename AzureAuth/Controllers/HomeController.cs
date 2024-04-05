@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 using System.IdentityModel.Tokens.Jwt;
-using System.Runtime.CompilerServices;
 using System.Security.Claims;
 
 namespace AzureAuth.Controllers {
@@ -28,8 +27,7 @@ namespace AzureAuth.Controllers {
         }
 
         private void AddViewData() {
-            ViewData["autorize_url"] = AutorizeUrl;
-
+            ViewData["autorize_url"] = AutorizeUrl
         }
 
 
